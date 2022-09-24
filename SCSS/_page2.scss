@@ -1,5 +1,4 @@
-@import './font.scss';
-@import './variables.scss';
+@import './_varindex.scss';
 
 .container2 {
     top: 10vh;
@@ -10,6 +9,9 @@
     display: flex;
     position: absolute;
     border: 3px solid $orangeclair;
+    @include breakpoint(1200px) {
+        margin-top: 90vh;
+    }
 
     .containertxt {
         // background-color: red;
@@ -28,12 +30,25 @@
             // margin-bottom: 300px;
             font-size: 90px;
             letter-spacing: 3px;
+            @include breakpoint(1750px) {
+                margin-bottom: 10px;
+                font-size: 70px;
+            }
+            @include breakpoint(1400px) {
+                font-size: 50px;
+            }
         }
 
         p {
             font-family: 'Montserrat', sans-serif;
             font-size: 30px;
             margin-bottom: 100px;
+            @include breakpoint(1400px) {
+                font-size: 25px;
+            }
+            @include breakpoint(1400px) {
+                font-size: 20px;
+            }
         }
     }
 }
