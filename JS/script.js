@@ -33,3 +33,5 @@ new Typewriter(AnimTXT, {
   .deleteChars(10)
   .typeString("<a class='frontend'> Front-End</a>")
   .start();
+
+

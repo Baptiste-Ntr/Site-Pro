@@ -12,7 +12,7 @@ body {
     height: 300vh;
     width: 100%;
     display: flex;
-
+    overflow-x: hidden;
     background-color: $blanccasse;
 }
 
@@ -21,8 +21,7 @@ body {
     height: 90vh;
     width: 100%;
     position: relative;
-    // margin-top: 100px;
-    @include breakpoint(1200px) {
+    @include breakpoint(1700px) {
         display: flex;
         justify-content: center;
     }
@@ -49,6 +48,9 @@ body {
             @include breakpoint(1200px) {
                 font-size: 2em;
             }
+            @include breakpoint(700px) {
+                font-size: 1.5em;
+            }
         }
 
         .orangelign {
@@ -58,6 +60,9 @@ body {
             margin-top: 10px;
             margin-bottom: 30px;
             // animation: barre 1s infinite ease-in-out;
+            @include breakpoint(700px) {
+                height: 0.5vh;
+            }
         }
 
         .orangelignanim {
@@ -75,6 +80,9 @@ body {
             text-align: center;
             vertical-align: middle;
             font-size: 30px;
+            @include breakpoint(700px) {
+                font-size: 20px;
+            }
         }
 
         .frontend {
@@ -100,19 +108,16 @@ body {
             height: 400px;
             width: 400px;
             background-position: -100px;
-            top: 15vh;
+            top: 25vh;
         }
         @include breakpoint(1700px) {
-            height: 300px;
-            width: 300px;
-            border-radius: 50%;
-            top: 50px;
-            right: 50px;
-        }
-        @include breakpoint(1500px) {
-            height: 200px;
-            width: 200px;
-            background-position: -70px;
+            // height: 200px;
+            // width: 200px;
+            // border-radius: 50%;
+            // background-position: -70px;
+            // left: 100px;
+            // top: 70px;
+            display: none;
         }
     }
 
@@ -133,48 +138,47 @@ body {
             border-radius: 50%;
         }
     }
+}
 
-    .mousescroll{
+.mousescroll {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    .mouse {
+        top: 90vh;
+        margin: auto;
+        height: 50px;
+        width: 30px;
+        border-radius: 15px;
+        border: 2px solid $grisfonce;
+        animation: mouse 2s infinite ease-in-out;
         cursor: pointer;
-        .mouse {
-            @include breakpoint(1200px) {
-                position: absolute;
-            }
-            top: 90vh;
-            margin: auto;
-            height: 50px;
-            width: 30px;
-            border-radius: 15px;
-            border: 2px solid $grisfonce;
-            animation: mouse 2s infinite ease-in-out;
-        }
-
-        .mouse::after {
-            height: 5px;
-            width: 5px;
-            background-color: $grisfonce;
-            border-radius: 50%;
-            content: '';
-            display: block;
-            margin: auto;
-            margin-top: 10px;
-            animation: scroll 2s infinite ease-in-out;
-        }
-
-        p {
-            font-family: 'Poppins', sans-serif;
-            text-transform: uppercase;
-            text-align: center;
-            margin-top: 20px;
-            font-size: 10px;
-            font-weight: 600;
-            color: $grisfonce;
-            animation: txtscroll 2s infinite ease-in-out;
-        }
+        
     }
 
-    
+    .mouse::after {
+        height: 5px;
+        width: 5px;
+        background-color: $grisfonce;
+        border-radius: 50%;
+        content: '';
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        animation: scroll 2s infinite ease-in-out;
+    }
 
+    p {
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 10px;
+        font-weight: 600;
+        color: $grisfonce;
+        animation: txtscroll 2s infinite ease-in-out;
+    }
 }
 
 @keyframes txtscroll {

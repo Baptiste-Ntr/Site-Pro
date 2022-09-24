@@ -1,0 +1,33 @@
+@import './_varindex.scss';
+
+nav {
+    border: 2px solid $grisfonce;
+    border-top: none;
+    border-bottom: none;
+    width: 10px;
+    height: 800px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    flex-direction: column;
+    right: 30px;
+    top: 5vh;
+    z-index: 99;
+    .progress {
+        height: 0px;
+        width: 10px;
+        display: flex;
+        position: fixed;
+        border-radius: 10px;
+        background: #000;
+    }
+    .rond {
+        height: 30px;
+        width: 30px;
+        background: $blanccasse;
+        border: 5px solid $orangeclair;
+        border-radius: 50%;
+    }
+}

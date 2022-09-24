@@ -16,6 +16,7 @@ body {
   height: 300vh;
   width: 100%;
   display: flex;
+  overflow-x: hidden;
   background-color: #F1FAEE;
 }
 
@@ -24,7 +25,7 @@ body {
   width: 100%;
   position: relative;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1700px) {
   .container {
     display: flex;
     justify-content: center;
@@ -56,12 +57,22 @@ body {
     font-size: 2em;
   }
 }
+@media only screen and (max-width: 700px) {
+  .container .maintxt .title {
+    font-size: 1.5em;
+  }
+}
 .container .maintxt .orangelign {
   width: 300px;
   background-color: #F4A261;
   height: 1vh;
   margin-top: 10px;
   margin-bottom: 30px;
+}
+@media only screen and (max-width: 700px) {
+  .container .maintxt .orangelign {
+    height: 0.5vh;
+  }
 }
 .container .maintxt .orangelignanim {
   width: 20vw;
@@ -77,6 +88,11 @@ body {
   text-align: center;
   vertical-align: middle;
   font-size: 30px;
+}
+@media only screen and (max-width: 700px) {
+  .container .maintxt .littletxt {
+    font-size: 20px;
+  }
 }
 .container .maintxt .frontend {
   font-family: "Permanent Marker", cursive;
@@ -99,23 +115,12 @@ body {
     height: 400px;
     width: 400px;
     background-position: -100px;
-    top: 15vh;
+    top: 25vh;
   }
 }
 @media only screen and (max-width: 1700px) {
   .container .mainbox {
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
-    top: 50px;
-    right: 50px;
-  }
-}
-@media only screen and (max-width: 1500px) {
-  .container .mainbox {
-    height: 200px;
-    width: 200px;
-    background-position: -70px;
+    display: none;
   }
 }
 .container .mainbox::after {
@@ -136,10 +141,14 @@ body {
     border-radius: 50%;
   }
 }
-.container .mousescroll {
-  cursor: pointer;
+
+.mousescroll {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
 }
-.container .mousescroll .mouse {
+.mousescroll .mouse {
   top: 90vh;
   margin: auto;
   height: 50px;
@@ -148,13 +157,9 @@ body {
   border: 2px solid #333;
   -webkit-animation: mouse 2s infinite ease-in-out;
           animation: mouse 2s infinite ease-in-out;
+  cursor: pointer;
 }
-@media only screen and (max-width: 1200px) {
-  .container .mousescroll .mouse {
-    position: absolute;
-  }
-}
-.container .mousescroll .mouse::after {
+.mousescroll .mouse::after {
   height: 5px;
   width: 5px;
   background-color: #333;
@@ -166,7 +171,7 @@ body {
   -webkit-animation: scroll 2s infinite ease-in-out;
           animation: scroll 2s infinite ease-in-out;
 }
-.container .mousescroll p {
+.mousescroll p {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   text-align: center;
