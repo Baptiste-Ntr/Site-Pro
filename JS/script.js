@@ -6,18 +6,14 @@ window.addEventListener("load", function () {
   barre.style.animation = "barre 1.5s ease";
 });
 
-// function scrolldown() {
-//   const test = document.getElementById("test");
-//   test.scrollIntoView({
-//     behavior: "smooth",
-//     block: "start",
-//     inline: "nearest",
-//   });
-
-//   if (arrowdown() == true) {
-//     arrowdown();
-//   }
-// }
+function scrolldown() {
+  const test = document.getElementById("container2");
+  test.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+    inline: "nearest",
+  });
+}
 
 // function arrowdown() {
 //   if (down == false) {

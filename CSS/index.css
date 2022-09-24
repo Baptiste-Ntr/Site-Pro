@@ -136,6 +136,9 @@ body {
     border-radius: 50%;
   }
 }
+.container .mousescroll {
+  cursor: pointer;
+}
 .container .mousescroll .mouse {
   top: 90vh;
   margin: auto;

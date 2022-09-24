@@ -135,6 +135,7 @@ body {
     }
 
     .mousescroll{
+        cursor: pointer;
         .mouse {
             @include breakpoint(1200px) {
                 position: absolute;
