@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background: #131316;
+        color: #fff;
+        font-family: sans-serif;
+        padding: 0;
+        margin: 0;
+      }
+      section {
+        display: grid;
+        place-items: center;
+        align-content: center;
+        min-height: 100vh;
+      }
+      .hidden {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100%);
+        transition: all 1s ease-out;
+      }
+
+      .show {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0px);
+      }
+    </style>
+
+    <section class="hidden">
+      <h1>Hi !</h1>
+    </section>
+
+    <section class="hidden">
+      <h1>Hi !</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </section>
+
+    <section class="hidden">
+      <h1>Hi !</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, dicta!
+      </p>
+    </section>
+
+    <section class="hidden">
+      <h2>Lorem, ipsum.</h2>
+    </section>
+
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          console.log(entry);
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      });
+      const hiddenElements = document.querySelectorAll(".hidden");
+      hiddenElements.forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>

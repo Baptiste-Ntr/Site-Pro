@@ -109,6 +109,7 @@ body {
   border-radius: 10%;
   background-size: cover;
   background-position: -190px;
+  cursor: pointer;
 }
 @media only screen and (max-width: 1890px) {
   .container .mainbox {
@@ -132,8 +133,8 @@ body {
   height: 100%;
   border-radius: 10%;
   z-index: -1;
-  -webkit-animation: orangebox 3s ease-in-out;
-          animation: orangebox 3s ease-in-out;
+  -webkit-animation: orangebox 5s infinite ease-in-out;
+          animation: orangebox 5s infinite ease-in-out;
   transition: all 0.3s;
 }
 @media only screen and (max-width: 1700px) {
@@ -357,4 +358,17 @@ body {
   padding: 50px;
   margin-top: 20px;
   font-family: "Montserrat", sans-serif;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(-100%);
+  transition: all 1s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
 }/*# sourceMappingURL=index.css.map */
