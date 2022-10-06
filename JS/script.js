@@ -15,13 +15,6 @@ function scrolldown() {
   });
 }
 
-// function arrowdown() {
-//   if (down == false) {
-//     arrow.style.animation = "arrowdown 2s slidein";
-//     return (down = true);
-//   }
-// }
-
 const AnimTXT = document.getElementById("animtxt");
 
 new Typewriter(AnimTXT, {

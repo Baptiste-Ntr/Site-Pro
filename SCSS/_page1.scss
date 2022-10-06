@@ -24,6 +24,7 @@ body {
     @include breakpoint(1700px) {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     .maintxt {
@@ -39,12 +40,18 @@ body {
         @include breakpoint(1890px) {
             margin-top: 25vh;
         }
+        @include breakpoint(1400px) {
+            margin-top: 0;
+        }
 
         .title {
             font-family: 'Poppins', sans-serif;
             font-weight: bold;
             letter-spacing: 6px;
             font-size: 4em;
+            @include breakpoint(1400px) {
+                font-size: 3em;
+            }
             @include breakpoint(1200px) {
                 font-size: 2em;
             }
@@ -143,6 +150,9 @@ body {
     bottom: 50px;
     left: 0;
     right: 0;
+    @include breakpoint(1400px) {
+        bottom: 15px;
+    }
     .mouse {
         top: 90vh;
         margin: auto;

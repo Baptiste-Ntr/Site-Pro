@@ -1,13 +1,13 @@
 .hidden {
     opacity: 0;
     filter: blur(5px);
-    transform: translateY(-100%);
+    // transform: translateY(-100%);
     transition: all 1s ease-out;
 
 }
 
 .show {
     opacity: 1;
-    transform: translateY(0);
+    // transform: translateY(0);
     filter: blur(0px);
 }
