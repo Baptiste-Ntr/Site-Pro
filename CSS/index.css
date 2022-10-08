@@ -374,6 +374,120 @@ body {
     transform: rotate(0deg);
   }
 }
+#sep {
+  display: block;
+  height: 5px;
+  width: 40%;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.containerservice {
+  height: 80vh;
+  width: 100%;
+  position: relative;
+}
+.containerservice .serviceglobal {
+  height: 50%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.containerservice .serviceglobal div {
+  position: relative;
+  height: 200px;
+  width: 500px;
+  background: #fff;
+  line-height: 200px;
+  text-align: center;
+  border: 10px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.containerservice .serviceglobal div h1 {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  font-size: 3em;
+}
+.containerservice .serviceglobal div:after {
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  display: flex;
+  content: "";
+  height: 170px;
+  width: 170px;
+  border: 10px solid #F4A261;
+  border-radius: 50%;
+  background: #333;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-out;
+}
+.containerservice .serviceglobal div:nth-child(1)::after {
+  content: url("../../SRC/SVG/Normal/FIGMA.svg");
+}
+.containerservice .serviceglobal div:hover::after {
+  scale: 1.1;
+  -webkit-animation: mooveafter 0.7s ease;
+          animation: mooveafter 0.7s ease;
+}
+.containerservice #sep {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 20%;
+}
+.containerservice .servicesecond {
+  height: 50%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.containerservice .servicesecond div {
+  position: relative;
+  height: 150px;
+  width: 400px;
+  background: #fff;
+  line-height: 150px;
+  text-align: center;
+  border: 5px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.containerservice .servicesecond div h1 {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+.containerservice .servicesecond div::after {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  display: flex;
+  content: "";
+  height: 100px;
+  width: 100px;
+  border: 8px solid #F4A261;
+  border-radius: 50%;
+  background: #333;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-out;
+}
+.containerservice .servicesecond div:hover::after {
+  scale: 1.1;
+  -webkit-animation: mooveafter 0.7s ease;
+          animation: mooveafter 0.7s ease;
+}
+
 .hidden {
   opacity: 0;
   filter: blur(5px);
@@ -523,16 +637,16 @@ body {
   }
   .containerlangage .langage img {
     opacity: 1;
-    content: url("../../SRC/SVG/Techno1100px/GIT.svg");
+    content: url("../../SRC/SVG/1100px/GIT.svg");
   }
   .containerlangage .langage img:nth-child(2) {
-    content: url("../../SRC/SVG/Techno1100px/REACT.svg");
+    content: url("../../SRC/SVG/1100px/REACT.svg");
   }
   .containerlangage .langage img:nth-child(3) {
-    content: url("../../SRC/SVG/Techno1100px/SASS.svg");
+    content: url("../../SRC/SVG/1100px/SASS.svg");
   }
   .containerlangage .langage img:nth-child(4) {
-    content: url("../../SRC/SVG/Techno1100px/Wordpress.svg");
+    content: url("../../SRC/SVG/1100px/Wordpress.svg");
   }
   .containerlangage .langage:last-child {
     position: relative;
