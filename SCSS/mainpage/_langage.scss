@@ -24,6 +24,7 @@
             width: 600px;
             justify-self: center;
             align-self: flex-end;
+            align-items: center;
             &::after {
                 content: '';
                 display: flex;
@@ -80,14 +81,11 @@
             content: url(../../SRC/SVG/Normal/CODE.svg);
         }
         
-        &:hover::after {
+        &:hover::after, &:last-of-type:hover::after {
             scale: 1.1;
             animation: mooveafter 0.7s ease;
         }
 
-        &:last-of-type:hover::after {
-            scale: 1;
-        }
         &:last-of-type:hover h1 {
             transform: translateY(-100%);
             opacity: 0;

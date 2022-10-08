@@ -125,7 +125,10 @@
                 }
             
                 img {
+                    display: inline-block;
                     opacity: 1;
+                    margin: 5px;
+                    margin-top: 25px;
                 }
 
                 &::after {
@@ -145,7 +148,8 @@
     .langage {
         img {
             opacity: 0;
-            margin-left: 50px;
+            margin-left: 10px;
+            margin-right: 10px;
             transition: all 0.3s ease-out;
             content: url('../../SRC/SVG/Normal/GIT.svg');
     
@@ -164,8 +168,14 @@
 
         &:last-of-type:hover img {
             opacity: 1;
-            transform: translateY(-140%);
+            transform: translateY(-250%);
         }
     }
      
+    @include breakpoint(1400px) {
+        .langage:last-of-type:hover img {
+            opacity: 1;
+            transform: translateY(-160%);
+        }
+    }
  }
