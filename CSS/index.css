@@ -18,22 +18,16 @@
 body {
   height: 300vh;
   width: 100%;
-  display: flex;
   overflow-x: hidden;
   background-color: #F1FAEE;
+  font-size: 1em;
 }
 
 .container {
   height: 90vh;
   width: 100%;
   position: relative;
-}
-@media only screen and (max-width: 1700px) {
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
 }
 .container .maintxt {
   color: #333;
@@ -45,36 +39,11 @@ body {
   flex-direction: column;
   margin-top: 30vh;
 }
-@media only screen and (max-width: 1890px) {
-  .container .maintxt {
-    margin-top: 25vh;
-  }
-}
-@media only screen and (max-width: 1400px) {
-  .container .maintxt {
-    margin-top: 0;
-  }
-}
 .container .maintxt .title {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   letter-spacing: 6px;
   font-size: 4em;
-}
-@media only screen and (max-width: 1400px) {
-  .container .maintxt .title {
-    font-size: 3em;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .container .maintxt .title {
-    font-size: 2em;
-  }
-}
-@media only screen and (max-width: 700px) {
-  .container .maintxt .title {
-    font-size: 1.5em;
-  }
 }
 .container .maintxt .orangelign {
   width: 300px;
@@ -82,11 +51,6 @@ body {
   height: 1vh;
   margin-top: 10px;
   margin-bottom: 30px;
-}
-@media only screen and (max-width: 700px) {
-  .container .maintxt .orangelign {
-    height: 0.5vh;
-  }
 }
 .container .maintxt .orangelignanim {
   width: 20vw;
@@ -98,15 +62,10 @@ body {
 .container .maintxt .littletxt {
   font-family: "Montserrat", sans-serif;
   width: 500px;
-  height: 100px;
+  height: 70px;
   text-align: center;
-  vertical-align: middle;
   font-size: 30px;
-}
-@media only screen and (max-width: 700px) {
-  .container .maintxt .littletxt {
-    font-size: 20px;
-  }
+  line-height: 70px;
 }
 .container .maintxt .frontend {
   font-family: "Permanent Marker", cursive;
@@ -125,19 +84,6 @@ body {
   background-position: -190px;
   cursor: pointer;
 }
-@media only screen and (max-width: 1890px) {
-  .container .mainbox {
-    height: 400px;
-    width: 400px;
-    background-position: -100px;
-    top: 25vh;
-  }
-}
-@media only screen and (max-width: 1700px) {
-  .container .mainbox {
-    display: none;
-  }
-}
 .container .mainbox::after {
   position: absolute;
   content: "";
@@ -151,25 +97,12 @@ body {
           animation: orangebox 5s infinite ease-in-out;
   transition: all 0.3s;
 }
-@media only screen and (max-width: 1700px) {
-  .container .mainbox::after {
-    border-radius: 50%;
-  }
-}
 
 .mousescroll {
-  position: absolute;
-  bottom: 50px;
-  left: 0;
-  right: 0;
-}
-@media only screen and (max-width: 1400px) {
-  .mousescroll {
-    bottom: 15px;
-  }
+  position: relative;
+  bottom: 20px;
 }
 .mousescroll .mouse {
-  top: 90vh;
   margin: auto;
   height: 50px;
   width: 30px;
@@ -295,19 +228,12 @@ body {
   }
 }
 .container2 {
-  top: 10vh;
   height: 60vh;
   width: 100%;
   background-color: #333;
-  margin-top: 100vh;
   display: flex;
-  position: absolute;
+  position: relative;
   border: 3px solid #F4A261;
-}
-@media only screen and (max-width: 1200px) {
-  .container2 {
-    margin-top: 90vh;
-  }
 }
 .container2 .containertxt {
   width: 30%;
@@ -325,63 +251,46 @@ body {
   font-size: 90px;
   letter-spacing: 3px;
 }
-@media only screen and (max-width: 1750px) {
-  .container2 .containertxt h1 {
-    margin-bottom: 10px;
-    font-size: 70px;
-  }
-}
-@media only screen and (max-width: 1400px) {
-  .container2 .containertxt h1 {
-    font-size: 50px;
-  }
-}
 .container2 .containertxt p {
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
   margin-bottom: 100px;
 }
-@media only screen and (max-width: 1400px) {
-  .container2 .containertxt p {
-    font-size: 25px;
-  }
-}
-@media only screen and (max-width: 1400px) {
-  .container2 .containertxt p {
-    font-size: 20px;
-  }
-}
 
 .containerlangage {
-  position: absolute;
+  position: relative;
   display: flex;
   height: 40vh;
   width: 100%;
-  top: 165vh;
+  margin-top: -30px;
   justify-content: space-around;
   align-items: flex-start;
 }
-.containerlangage .langage {
+
+.langage {
   display: inline;
+  position: relative;
   height: 150px;
   width: 400px;
   background: #fff;
-  border: 8px solid #333333;
+  border: 8px solid #333;
   border-radius: 5px;
   text-align: center;
-  line-height: 110px;
+  line-height: 150px;
   cursor: pointer;
   transition: 0.3s ease;
 }
-.containerlangage .langage:last-child {
+.langage:last-child {
   position: absolute;
   width: 600px;
   justify-self: center;
   align-self: flex-end;
 }
-.containerlangage .langage:last-child::after {
+.langage:last-child::after {
   content: "";
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   width: 130px;
   height: 130px;
@@ -393,12 +302,15 @@ body {
   margin-top: -60px;
   margin-left: -50px;
 }
-.containerlangage .langage:last-child img {
-  opacity: 0;
-  margin-left: 50px;
-  transition: all 0.3s ease-out;
+.langage h1 {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  position: relative;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  font-size: 2.5rem;
 }
-.containerlangage .langage::after {
+.langage::after {
   content: "";
   display: flex;
   justify-content: center;
@@ -415,58 +327,30 @@ body {
   margin-left: -50px;
   transition: all 0.2s ease-out;
 }
-.containerlangage .langage:nth-child(1)::after {
-  content: url(../../SRC/SVG/HTML.svg);
+.langage:nth-child(1)::after {
+  content: url(../../SRC/SVG/Normal/HTML.svg);
 }
-.containerlangage .langage:nth-child(2)::after {
-  content: url(../../SRC/SVG/CSS.svg);
+.langage:nth-child(2)::after {
+  content: url(../../SRC/SVG/Normal/CSS.svg);
 }
-.containerlangage .langage:nth-child(3)::after {
-  content: url(../../SRC/SVG/JS.svg);
+.langage:nth-child(3)::after {
+  content: url(../../SRC/SVG/Normal/JS.svg);
 }
-.containerlangage .langage:nth-child(4)::after {
-  content: url(../../SRC/SVG/TECH.svg);
+.langage:nth-child(4)::after {
+  content: url(../../SRC/SVG/Normal/CODE.svg);
 }
-.containerlangage .langage:hover::after {
+.langage:hover::after {
   scale: 1.1;
   -webkit-animation: mooveafter 0.7s ease;
           animation: mooveafter 0.7s ease;
 }
-.containerlangage .langage:last-of-type:hover::after {
+.langage:last-of-type:hover::after {
   scale: 1;
 }
-.containerlangage .langage:last-of-type:hover h1 {
+.langage:last-of-type:hover h1 {
   transform: translateY(-100%);
   opacity: 0;
   color: #F1FAEE;
-}
-.containerlangage .langage:last-of-type:hover img {
-  opacity: 1;
-  transform: translateY(-100%);
-}
-.containerlangage .langage h1 {
-  font-family: "Poppins", sans-serif;
-  color: #333333;
-  position: relative;
-  text-align: center;
-  transition: all 0.4s ease-in-out;
-}
-.containerlangage .langage h1::after {
-  display: block;
-  content: "";
-  width: 100px;
-  height: 3px;
-  background: #333;
-  border-radius: 10px;
-  margin: auto;
-  margin-top: -20px;
-}
-.containerlangage .langage p {
-  font-size: 20px;
-  color: #333;
-  opacity: 0;
-  transform: translateY(10%);
-  transition: all 0.5s;
 }
 
 @-webkit-keyframes mooveafter {
@@ -501,4 +385,193 @@ body {
 .show {
   opacity: 1;
   filter: blur(0px);
+}
+
+@media only screen and (max-width: 1890px) {
+  .container .maintxt {
+    margin-top: 25vh;
+  }
+  .container .mainbox {
+    height: 400px;
+    width: 400px;
+    background-position: -100px;
+    top: 25vh;
+  }
+}
+@media only screen and (max-width: 1700px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .mainbox {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .container .maintxt {
+    margin-top: 0;
+  }
+  .container .maintxt .title {
+    font-size: 3em;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .container .maintxt .title {
+    font-size: 2em;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .container .maintxt .title {
+    font-size: 1.5em;
+  }
+  .container .maintxt .orangelign {
+    height: 0.5vh;
+  }
+  .container .maintxt .littletxt {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 1750px) {
+  .container2 .containertxt h1 {
+    margin-bottom: 10px;
+    font-size: 70px;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .container2 .containertxt h1 {
+    font-size: 50px;
+  }
+  .container2 .containertxt p {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .containerlangage .langage {
+    width: 350px;
+  }
+  .containerlangage .langage:last-child {
+    width: 450px;
+  }
+  .containerlangage .langage:last-child::after {
+    width: 100px;
+    height: 100px;
+    margin-top: -30px;
+    border: 7px solid #F4A261;
+  }
+  .containerlangage .langage::after {
+    width: 100px;
+    height: 100px;
+    margin-top: -30px;
+    border: 7px solid #F4A261;
+  }
+  .containerlangage .langage:nth-child(1)::after {
+    content: url(../../SRC/SVG/1600px/HTML.svg);
+  }
+  .containerlangage .langage:nth-child(2)::after {
+    content: url(../../SRC/SVG/1600px/CSS.svg);
+  }
+  .containerlangage .langage:nth-child(3)::after {
+    content: url(../../SRC/SVG/1600px/JS.svg);
+  }
+  .containerlangage .langage:nth-child(4)::after {
+    content: url(../../SRC/SVG/1600px/CODE.svg);
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .containerlangage .langage {
+    width: 250px;
+    height: 100px;
+    font-size: 0.7rem;
+    line-height: 100px;
+    border: 7px solid #333;
+  }
+  .containerlangage .langage:last-child::after {
+    width: 60px;
+    height: 60px;
+    margin-top: -20px;
+    margin-left: -30px;
+    border: 6px solid #F4A261;
+  }
+  .containerlangage .langage h1 {
+    font-size: 1.5rem;
+  }
+  .containerlangage .langage::after {
+    width: 60px;
+    height: 60px;
+    margin-top: -20px;
+    margin-left: -30px;
+    border: 6px solid #F4A261;
+  }
+  .containerlangage .langage:nth-child(1)::after {
+    content: url(../../SRC/SVG/1400px/HTML.svg);
+  }
+  .containerlangage .langage:nth-child(2)::after {
+    content: url(../../SRC/SVG/1400px/CSS.svg);
+  }
+  .containerlangage .langage:nth-child(3)::after {
+    content: url(../../SRC/SVG/1400px/JS.svg);
+  }
+  .containerlangage .langage:nth-child(4)::after {
+    content: url(../../SRC/SVG/1400px/CODE.svg);
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .containerlangage {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    margin-top: 150px;
+  }
+  .containerlangage .langage img {
+    opacity: 1;
+    content: url("../../SRC/SVG/Techno1100px/GIT.svg");
+  }
+  .containerlangage .langage img:nth-child(2) {
+    content: url("../../SRC/SVG/Techno1100px/REACT.svg");
+  }
+  .containerlangage .langage img:nth-child(3) {
+    content: url("../../SRC/SVG/Techno1100px/SASS.svg");
+  }
+  .containerlangage .langage img:nth-child(4) {
+    content: url("../../SRC/SVG/Techno1100px/Wordpress.svg");
+  }
+  .containerlangage .langage:last-child {
+    position: relative;
+    margin: auto;
+    width: 250px;
+  }
+  .containerlangage .langage:last-child h1 {
+    display: none;
+  }
+  .containerlangage .langage:last-child img {
+    opacity: 1;
+  }
+  .containerlangage .langage:last-child::after {
+    border: 4px solid #F4A261;
+  }
+  .containerlangage .langage::after {
+    border: 4px solid #F4A261;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .langage img {
+    opacity: 0;
+    margin-left: 50px;
+    transition: all 0.3s ease-out;
+    content: url("../../SRC/SVG/Normal/GIT.svg");
+  }
+  .langage img:nth-child(2) {
+    content: url("../../SRC/SVG/Normal/REACT.svg");
+  }
+  .langage img:nth-child(3) {
+    content: url("../../SRC/SVG/Normal/SASS.svg");
+  }
+  .langage img:nth-child(4) {
+    content: url("../../SRC/SVG/Normal/Wordpress.svg");
+  }
+  .langage:last-of-type:hover img {
+    opacity: 1;
+    transform: translateY(-140%);
+  }
 }/*# sourceMappingURL=index.css.map */

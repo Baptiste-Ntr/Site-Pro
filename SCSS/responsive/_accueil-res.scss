@@ -1,0 +1,65 @@
+@include breakpoint(1890px) {
+    .container {
+        .maintxt {
+            margin-top: 25vh;
+        }
+
+        .mainbox {
+            height: 400px;
+            width: 400px;
+            background-position: -100px;
+            top: 25vh;
+        }
+    }
+}
+
+@include breakpoint(1700px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .mainbox {
+            display: none;
+        }
+    }
+}
+
+@include breakpoint(1400px) {
+    .container {
+        .maintxt {
+            margin-top: 0;
+            .title {
+                font-size: 3em;
+            }
+        }
+    }
+}
+
+@include breakpoint(1200px) {
+    .container {
+        .maintxt {
+            .title {
+                font-size: 2em;
+            }
+        }
+    }
+}
+
+@include breakpoint(700px) {
+    .container {
+        .maintxt {
+            .title {
+                font-size: 1.5em;
+            }
+
+            .orangelign {
+                height: 0.5vh;
+            }
+
+            .littletxt {
+                font-size: 20px;
+            }
+        }
+    }
+}

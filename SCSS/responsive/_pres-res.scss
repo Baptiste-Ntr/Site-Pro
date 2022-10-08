@@ -1,0 +1,23 @@
+@include breakpoint(1750px) {
+   .container2 {
+    .containertxt {
+        h1 {
+            margin-bottom: 10px;
+            font-size: 70px;
+        }
+    }
+   } 
+}
+
+@include breakpoint(1400px) {
+    .container2 {
+        .containertxt {
+            h1 {
+                font-size: 50px;
+            }
+            p {
+                font-size: 25px;
+            }
+        }
+    }
+}

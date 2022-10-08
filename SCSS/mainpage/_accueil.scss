@@ -11,9 +11,9 @@
 body {
     height: 300vh;
     width: 100%;
-    display: flex;
     overflow-x: hidden;
     background-color: $blanccasse;
+    font-size: 1em;
 }
 
 
@@ -21,15 +21,9 @@ body {
     height: 90vh;
     width: 100%;
     position: relative;
-    @include breakpoint(1700px) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
+    display: flex;
     .maintxt {
         color: $grisfonce;
-        // background-color: orange;
         height: 500px;
         width: 1200px;
         display: flex;
@@ -37,27 +31,12 @@ body {
         align-items: center;
         flex-direction: column;
         margin-top: 30vh;
-        @include breakpoint(1890px) {
-            margin-top: 25vh;
-        }
-        @include breakpoint(1400px) {
-            margin-top: 0;
-        }
 
         .title {
             font-family: 'Poppins', sans-serif;
             font-weight: bold;
             letter-spacing: 6px;
             font-size: 4em;
-            @include breakpoint(1400px) {
-                font-size: 3em;
-            }
-            @include breakpoint(1200px) {
-                font-size: 2em;
-            }
-            @include breakpoint(700px) {
-                font-size: 1.5em;
-            }
         }
 
         .orangelign {
@@ -66,10 +45,6 @@ body {
             height: 1vh;
             margin-top: 10px;
             margin-bottom: 30px;
-            // animation: barre 1s infinite ease-in-out;
-            @include breakpoint(700px) {
-                height: 0.5vh;
-            }
         }
 
         .orangelignanim {
@@ -83,13 +58,10 @@ body {
         .littletxt {
             font-family: 'Montserrat', sans-serif;
             width: 500px;
-            height: 100px;
+            height: 70px;
             text-align: center;
-            vertical-align: middle;
             font-size: 30px;
-            @include breakpoint(700px) {
-                font-size: 20px;
-            }
+            line-height: 70px;
         }
 
         .frontend {
@@ -111,21 +83,6 @@ body {
         background-size: cover;
         background-position: -190px;
         cursor: pointer;
-        @include breakpoint(1890px) {
-            height: 400px;
-            width: 400px;
-            background-position: -100px;
-            top: 25vh;
-        }
-        @include breakpoint(1700px) {
-            // height: 200px;
-            // width: 200px;
-            // border-radius: 50%;
-            // background-position: -70px;
-            // left: 100px;
-            // top: 70px;
-            display: none;
-        }
     }
 
     .mainbox::after {
@@ -139,22 +96,13 @@ body {
         z-index: -1;
         animation: orangebox 5s infinite ease-in-out;
         transition: all 0.3s;
-        @include breakpoint(1700px) {
-            border-radius: 50%;
-        }
     }
 }
 
 .mousescroll {
-    position: absolute;
-    bottom: 50px;
-    left: 0;
-    right: 0;
-    @include breakpoint(1400px) {
-        bottom: 15px;
-    }
+    position: relative;
+    bottom: 20px;
     .mouse {
-        top: 90vh;
         margin: auto;
         height: 50px;
         width: 30px;
@@ -162,7 +110,6 @@ body {
         border: 2px solid $grisfonce;
         animation: mouse 2s infinite ease-in-out;
         cursor: pointer;
-        
     }
 
     .mouse::after {
@@ -220,9 +167,6 @@ body {
         background-color: $orangeclair;
     }
 
-    // 80% {
-    //     opacity: 0;
-    // }
 }
 
 @keyframes barre {

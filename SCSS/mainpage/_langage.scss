@@ -1,21 +1,22 @@
 .containerlangage {
-    position: absolute;
+    position: relative;
     display: flex;
     height: 40vh;
     width: 100%;
-    // background: #000;
-    top: 165vh;
+    margin-top: -30px;
     justify-content: space-around;
     align-items: flex-start;
+    }
     .langage {
         display: inline;
+        position: relative;
         height: 150px;
         width: 400px;
         background: #fff;
-        border: 8px solid #333333;
+        border: 8px solid $grisfonce;
         border-radius: 5px;
         text-align: center;
-        line-height: 110px;
+        line-height: 150px;
         cursor: pointer;
         transition: 0.3s ease;
         &:last-child {
@@ -25,24 +26,30 @@
             align-self: flex-end;
             &::after {
                 content: '';
-                display: block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 position: absolute;
                 width: 130px;
                 height: 130px;
-                background: #333;
-                border: 10px solid #F4A261;
+                background: $grisfonce;
+                border: 10px solid $orangeclair;
                 border-radius: 50%;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 top: 0;
                 margin-top: -60px;
                 margin-left: -50px;
             }
-            img {
-                opacity: 0;
-                margin-left: 50px;
-                transition: all 0.3s ease-out;
-            }
         }
+        h1 {
+            font-family: $Poppins;
+            color: $grisfonce;
+            position: relative;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            font-size: 2.5rem;
+        }
+
         &::after {
             content: '';
             display: flex;
@@ -51,8 +58,8 @@
             position: absolute;
             width: 120px;
             height: 120px;
-            background: #333;
-            border: 10px solid #F4A261;
+            background: $grisfonce;
+            border: 10px solid $orangeclair;
             border-radius: 50%;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             top: 0;
@@ -61,19 +68,19 @@
             transition: all 0.2s ease-out;
         }
         &:nth-child(1)::after {
-            content: url(../../SRC/SVG/HTML.svg);
+            content: url(../../SRC/SVG/Normal/HTML.svg);
         }
         &:nth-child(2)::after {
-            content: url(../../SRC/SVG/CSS.svg);
+            content: url(../../SRC/SVG/Normal/CSS.svg);
         }
         &:nth-child(3)::after {
-            content: url(../../SRC/SVG/JS.svg);
+            content: url(../../SRC/SVG/Normal/JS.svg);
         }
         &:nth-child(4)::after {
-            content: url(../../SRC/SVG/TECH.svg);
+            content: url(../../SRC/SVG/Normal/CODE.svg);
         }
-
-        &:hover::after{
+        
+        &:hover::after {
             scale: 1.1;
             animation: mooveafter 0.7s ease;
         }
@@ -86,46 +93,7 @@
             opacity: 0;
             color: $blanccasse;
         }
-        &:last-of-type:hover img {
-            opacity: 1;
-            transform: translateY(-100%);
-        }
-
-        // &:hover p{
-        //     transform: translateY(-70%);
-        //     opacity: 1;
-        //     line-height: 20px;
-        // }
-
-        
-        h1 {
-            font-family: $Poppins;
-            color: #333333;
-            position: relative;
-            text-align: center;
-            transition: all 0.4s ease-in-out;
-            &::after {
-                display: block;
-                content: '';
-                width: 100px;
-                height: 3px;
-                background: #333;
-                border-radius: 10px;
-                margin: auto;
-                margin-top: -20px;
-                
-            }
-        }
-
-        p {
-            font-size: 20px;
-            color: #333;
-            opacity: 0;
-            transform: translateY(10%);
-            transition: all 0.5s;
-        }
     }
-}
 
 @keyframes mooveafter {
     from {

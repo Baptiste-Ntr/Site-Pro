@@ -1,20 +1,13 @@
 @import '../var/varindex';
 
 .container2 {
-    top: 10vh;
     height: 60vh;
     width: 100%;
     background-color: #333;
-    margin-top: 100vh;
     display: flex;
-    position: absolute;
+    position: relative;
     border: 3px solid $orangeclair;
-    @include breakpoint(1200px) {
-        margin-top: 90vh;
-    }
-
     .containertxt {
-        // background-color: red;
         width: 30%;
         height: 60vh;
         margin: auto;
@@ -27,28 +20,14 @@
         
         h1 {
             font-family: 'Poppins', sans-serif;
-            // margin-bottom: 300px;
             font-size: 90px;
             letter-spacing: 3px;
-            @include breakpoint(1750px) {
-                margin-bottom: 10px;
-                font-size: 70px;
-            }
-            @include breakpoint(1400px) {
-                font-size: 50px;
-            }
         }
 
         p {
             font-family: 'Montserrat', sans-serif;
             font-size: 30px;
             margin-bottom: 100px;
-            @include breakpoint(1400px) {
-                font-size: 25px;
-            }
-            @include breakpoint(1400px) {
-                font-size: 20px;
-            }
         }
     }
 }
