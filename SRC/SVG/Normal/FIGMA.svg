@@ -1,24 +1,12 @@
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="10"
-  height="10"
-  preserveAspectRatio="xMidYMid meet"
-  viewBox="0 0 256 384"
-  style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
-><path
-    fill="#0ACF83"
-    d="M64 384c35.328 0 64-28.672 64-64v-64H64c-35.328 0-64 28.672-64 64s28.672 64 64 64Z"
-  /><path
-    fill="#A259FF"
-    d="M0 192c0-35.328 28.672-64 64-64h64v128H64c-35.328 0-64-28.672-64-64Z"
-  /><path
-    fill="#F24E1E"
-    d="M0 64C0 28.672 28.672 0 64 0h64v128H64C28.672 128 0 99.328 0 64Z"
-  /><path
-    fill="#FF7262"
-    d="M128 0h64c35.328 0 64 28.672 64 64s-28.672 64-64 64h-64V0Z"
-  /><path
-    fill="#1ABCFE"
-    d="M256 192c0 35.328-28.672 64-64 64s-64-28.672-64-64s28.672-64 64-64s64 28.672 64 64Z"
-  /></svg>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="3" height="3">
+
+<g transform="matrix(0.006 0 0 0.006 -0 0.6)">
+    <path d="M64 384C 99.328 384 128 355.328 128 320L128 320L128 256L64 256C 28.672 256 0 284.672 0 320C 0 355.328 28.672 384 64 384z" stroke="none" fill="#0ACF83" fill-rule="nonzero" />
+    <path d="M0 192C 0 156.672 28.672 128 64 128L64 128L128 128L128 256L64 256C 28.672 256 0 227.328 0 192z" stroke="none" fill="#A259FF" fill-rule="nonzero" />
+    <path d="M0 64C 0 28.672 28.672 0 64 0L64 0L128 0L128 128L64 128C 28.672 128 0 99.328 0 64z" stroke="none" fill="#F24E1E" fill-rule="nonzero" />
+    <path d="M128 0L192 0C 227.328 0 256 28.672 256 64C 256 99.328 227.328 128 192 128L192 128L128 128L128 0z" stroke="none" fill="#FF7262" fill-rule="nonzero" />
+    <path d="M256 192C 256 227.328 227.328 256 192 256C 156.672 256 128 227.328 128 192C 128 156.672 156.672 128 192 128C 227.328 128 256 156.672 256 192z" stroke="none" fill="#1ABCFE" fill-rule="nonzero" />
+</g>
+</svg>

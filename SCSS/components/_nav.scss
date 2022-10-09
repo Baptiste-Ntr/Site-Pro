@@ -1,33 +1,40 @@
 @import '../var/varindex';
 
 nav {
-    border: 2px solid $grisfonce;
-    border-top: none;
-    border-bottom: none;
-    width: 10px;
-    height: 800px;
-    border-radius: 10px;
+    width: 50px;
+    height: 400px;
     display: flex;
+    position: absolute;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
-    position: fixed;
     flex-direction: column;
-    right: 30px;
-    top: 5vh;
-    z-index: 99;
-    .progress {
-        height: 0px;
-        width: 10px;
-        display: flex;
-        position: fixed;
-        border-radius: 10px;
-        background: #000;
-    }
-    .rond {
+    // background: red;
+    top: 10vh;
+    left: 50px;
+
+    div {
         height: 30px;
         width: 30px;
         background: $blanccasse;
-        border: 5px solid $orangeclair;
-        border-radius: 50%;
+        border: 2px solid #333;
+        transform: rotate(45deg);
+        cursor: pointer;
+        z-index: 2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        &:nth-child(1) {
+            transform: rotate(0);
+            background: #333;
+        }
+    }
+
+    .barre {
+        position: absolute;
+        height: 300px;
+        width: 2px;
+        transform: rotate(0);
+        z-index: 1;
+        background: #333;
+        cursor: unset;
+        box-shadow: none;
     }
 }
